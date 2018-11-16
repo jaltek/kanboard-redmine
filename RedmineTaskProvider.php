@@ -110,4 +110,14 @@ class RedmineTaskProvider extends Base implements ExternalTaskProviderInterface
         return 'issues/' . intval(str_replace('#', '', $formValues['number']));
     }
 
+    public function getIcon()
+    {
+      return '<i class="fa fa-bug fa-fw"></i>';
+    }
+
+    public function getMenuAddLabel()
+    {
+      return t('Import Redmine task');
+    }
+
 }
